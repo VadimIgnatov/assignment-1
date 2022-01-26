@@ -21,11 +21,20 @@ function App() {
         </p>
         <p>Historical Sites & More</p>
       </header>
-      <section class="grid">
+      <section id="gallery">
+        <img src={skyline} id= 'a'></img>
+        <img src={oldcityhall} id= 'b'></img>
+        <img src={tower} id= 'c'></img>
+        <img src={rom} id= 'd'></img>
+        <img src={newcityhall} id= 'e'></img>
+        <img src={rogers} id= 'f'></img>
+        
+      </section>
+      {/* <section>
         {
           images.map(image => <img src={image} alt="logo" onClick={()=>setSelectedImage(image)} />)
         }
-      </section>
+      </section> */}
       <div id='overlay' style={{visibility: selectedImage ? 'visible': 'hidden'}}>
         <h1><a class="close" onClick={ ()=>setSelectedImage(null) }>X</a></h1>
         <img src={selectedImage} />
