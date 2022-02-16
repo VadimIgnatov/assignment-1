@@ -11,12 +11,13 @@
 body {
   background-color: lightgray;
 }
+
 #gallery {
   
   line-height: 0;
   -webkit-column-count: 3;
   -webkit-column-gap: 0px;
-  -moz-column-count: 5;
+  -moz-column-count: 3;
   -moz-column-gap: 0px;
   column-count: 3;
   column-gap: 10px ;
@@ -72,31 +73,22 @@ object-fit: fill;
 #e{
 height: 150px;
 object-fit: fill;
- 
 }
 
 
 #f{
 height: 400px;
-object-fit: fill;
- 
+object-fit: fill; 
 }
-
-
-
-
-
-
-
-
-
-
 
 #overlay img {
   height: 100%;
   width: auto;
 }
-
+header{
+  float: none;
+  
+}
 
 .App {
   text-align: center;
@@ -119,11 +111,16 @@ object-fit: fill;
   }
 }
 
-.App-header {
+.App-header p{
   display: flex;
+  float: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  column-count: 3;
+  justify-content: space-around;
+ 
+
+ 
+ 
   font-size: calc(10px + 2vmin);
   color: black;
 }
@@ -140,3 +137,5 @@ object-fit: fill;
     transform: rotate(360deg);
   }
 }
+
+

@@ -26,12 +26,15 @@ function App() {
         <p>Historical Sites & More</p>
       </header>
       <section id="gallery">
+      
         <img src={skyline} id= 'a'></img>
         <img src={oldcityhall} id= 'b'></img>
         <img src={tower} id= 'c'></img>
         <img src={rom} id= 'd'></img>
         <img src={rogers} id= 'e'></img>
         <img src={newcityhall} id= 'f'></img>
+        
+        
       </section>
       <section id="social">
 
