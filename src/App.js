@@ -15,43 +15,59 @@ import twitter from './twitter.png';
 
 function App() {
   const images = [skyline, oldcityhall, tower,  rom, rogers, newcityhall];
+  const title = ['Toronto', "Old City Hall", "The CN Tower", "Royal Ontario Museum", "The Rogers Center", "Toronto City Hall"];
+  const description = ["The SKyline", "The Clock Tower", "one of the Worlds Tallest Towers", " Most Visited Museum in Canada",  "Toronto's Iconic Skydone", "A Brutalist Architecture Masterpiece"];
   const [selectedImage, setSelectedImage] = useState(null);
+      
+
+
+
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          The City of Toronto
-        </p>
-        <p>Historical Sites & More</p>
+        <p1>
+          The City of <b>Toronto</b>
+        </p1>
+        <p2>
+          Historical Sites & <b>More</b></p2>
       </header>
-      <section id="gallery">
-      
-        <img src={skyline} id= 'a'></img>
+      <section class="grid">
+        {
+          images.map(image => <img src={image} alt="logo" onClick={()=>setSelectedImage(image)} />)
+        }
+        <div class="grid">toronto</div>
+        <div class="grid">2</div>
+        <div class="grid">3</div>  
+        <div class="grid">4</div>
+        <div class="grid">5</div>
+        <div class="grid">6</div>  
+        <div class="grid">7</div>
+        <div class="grid">8</div>
+        <div class="grid">9</div> 
+      </section>
+      <div id='overlay' style={{visibility: selectedImage ? 'visible': 'hidden'}}>
+        <h1><a class="close" onClick={ ()=>setSelectedImage(null) }>X</a></h1>
+        <img src={selectedImage} />
+      </div>
+        {/* /* /* <section id="gallery">
+         
+        <img src={skyline} id= 'a' alt="skyline"></img>
         <img src={oldcityhall} id= 'b'></img>
         <img src={tower} id= 'c'></img>
         <img src={rom} id= 'd'></img>
         <img src={rogers} id= 'e'></img>
         <img src={newcityhall} id= 'f'></img>
-        
-        
-      </section>
+      </section>  */}
       <section id="social">
 
-        <a href="https://twitter.com/cityoftoronto?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src={twitter}></img></a>
-        <a href="https://www.facebook.com/cityofto/" target="_blank"><img src={fb}></img></a>
-        <a href="https://ca.linkedin.com/company/city-of-toronto" target="_blank"><img src={linked}></img></a>
-        <a href="https://www.instagram.com/cityofto/?hl=en" target="_blank"><img src={insta}></img></a>
+        <a href="https://twitter.com/cityoftoronto?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src={twitter} id="twitter"></img></a>
+        <a href="https://www.facebook.com/cityofto/" target="_blank"><img src={fb}id="fb"></img></a>
+        <a href="https://ca.linkedin.com/company/city-of-toronto" target="_blank"><img src={linked}id="linked"></img></a>
+        <a href="https://www.instagram.com/cityofto/?hl=en" target="_blank"><img src={insta}id="insta"></img></a>
        </section> 
-      {/* <section>
-        {
-          images.map(image => <img src={image} alt="logo" onClick={()=>setSelectedImage(image)} />)
-        }
-      </section> */}
-      <div id='overlay' style={{visibility: selectedImage ? 'visible': 'hidden'}}>
-        <h1><a class="close" onClick={ ()=>setSelectedImage(null) }>X</a></h1>
-        <img src={selectedImage} />
-      </div>
+      
+      
     </div>
   );
 }

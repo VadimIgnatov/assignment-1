@@ -1,13 +1,4 @@
-#overlay {
-  margin: 5vh 5vw;
-  width:90vw;
-  height: 90vh;
-  background-color: yellow;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+
 body {
   background-color: lightgray;
 }
@@ -17,11 +8,13 @@ body {
   line-height: 0;
   -webkit-column-count: 3;
   -webkit-column-gap: 0px;
-  -moz-column-count: 3;
+  -moz-column-count:3;
   -moz-column-gap: 0px;
   column-count: 3;
   column-gap: 10px ;
   margin: 100px;
+  margin-top: 50px;
+  
   
 }
 #gallery img {
@@ -41,101 +34,122 @@ body {
   padding: 15px;
 }
 
-#a{
- height: 150px;
- object-fit: fill;
- 
- 
-}
 
-
-#b{
-height: 400px;
-object-fit: fill;
- 
-}
-
-
-#c{
-height: 400px;
-object-fit: fill;
- 
-}
-
-
-#d{
-height: 150px;
-object-fit: fill;
- 
-}
-
-
-#e{
-height: 150px;
-object-fit: fill;
-}
-
-
-#f{
-height: 400px;
-object-fit: fill; 
-}
-
-#overlay img {
-  height: 100%;
-  width: auto;
-}
-header{
-  float: none;
-  
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (max-width: 1000px) { 
+@media (max-width: 1100px) { 
   #gallery {
     -moz-column-count: 2;
     -webkit-column-count: 2;
-    column-count: 2;
+    column-count: 1;
   }
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
     
   }
-}
+} 
 
-.App-header p{
-  display: flex;
-  float: none;
-  flex-direction: column;
-  column-count: 3;
-  justify-content: space-around;
- 
+.App-header 
 
- 
- 
-  font-size: calc(10px + 2vmin);
+  p1{
+
+  display: block;
+  position: relative;
+  font-family:'Open Sans', sans-serif ;
+  font-size: calc(25px + 2vmin);
   color: black;
+  margin-left: 100px
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  p2 {
+  display: block;
+  padding-top: 20px;
+  position: relative;
+  font-family:'Open Sans', sans-serif ;
+  font-size: calc(15px + 2vmin);
+  color: grey;
+  margin-left: 100px
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+
+
+
+
+#a:hover {
+ 
+ opacity: 50%;
+ transition:ease-in 200ms;
+}
+#fb:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+
+}
+#insta:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+}
+#twitter:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+}
+#linked:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
 }
 
 
+
+
+#overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px 5px;
+  max-width:  70vh;
+  max-height: 70vh;
+  background-color:transparent;
+  z-index: 1; 
+  border: black 1px solid;
+  
+  
+}
+
+#overlay img {
+  height: auto;
+  width: 600px;
+  
+
+}
+
+.grid {
+  column-count: 3;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 900px;
+}
+
+.grid img {
+  max-width: 300px;
+  max-height: 700px;
+  border: 1px solid black;
+}
+
+img:hover {
+
+
+
+}
+
+.close:hover {
+  background-color: tomato;
+}
+#skyline {
+  opacity: 50%;
+}
