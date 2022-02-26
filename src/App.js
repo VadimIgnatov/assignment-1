@@ -36,15 +36,7 @@ function App() {
         {
           images.map(image => <img src={image} alt="logo" onClick={()=>setSelectedImage(image)} />)
         }
-        <div class="grid">toronto</div>
-        <div class="grid">2</div>
-        <div class="grid">3</div>  
-        <div class="grid">4</div>
-        <div class="grid">5</div>
-        <div class="grid">6</div>  
-        <div class="grid">7</div>
-        <div class="grid">8</div>
-        <div class="grid">9</div> 
+        
       </section>
       <div id='overlay' style={{visibility: selectedImage ? 'visible': 'hidden'}}>
         <h1><a class="close" onClick={ ()=>setSelectedImage(null) }>X</a></h1>
