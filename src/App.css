@@ -1,61 +1,155 @@
+
+body {
+  background-color: lightgray;
+}
+
+#gallery {
+  
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count:3;
+  -moz-column-gap: 0px;
+  column-count: 3;
+  column-gap: 10px ;
+  margin: 100px;
+  margin-top: 50px;
+  
+  
+}
+#gallery img {
+ width: 100% !important;
+ height: auto !important;
+ padding-top: 10px;
+}
+#social {
+  float: left;
+  margin: 100px;
+}
+
+
+#social img{
+  height: 25px;
+  display: inline-block;
+  padding: 15px;
+}
+
+
+@media (max-width: 1100px) { 
+  #gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 1;
+  }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    
+  }
+} 
+
+.App-header 
+
+  p1{
+
+  display: block;
+  position: relative;
+  font-family:'Open Sans', sans-serif ;
+  font-size: calc(25px + 2vmin);
+  color: black;
+  margin-left: 100px
+}
+  p2 {
+  display: block;
+  padding-top: 20px;
+  position: relative;
+  font-family:'Open Sans', sans-serif ;
+  font-size: calc(15px + 2vmin);
+  color: grey;
+  margin-left: 100px
+  }
+  
+
+
+
+
+#a:hover {
+ 
+ opacity: 50%;
+ transition:ease-in 200ms;
+}
+#fb:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+
+}
+#insta:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+}
+#twitter:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+}
+#linked:hover{
+  opacity: 50%;
+  transition: transform .7s ease-in-out;
+  transform: rotate(360deg);
+  background-color: white;
+}
+
+
+
+
 #overlay {
-  margin: 5vh 5vw;
-  width:90vw;
-  height: 90vh;
-  background-color: yellow;
-  z-index: 1;
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px 5px;
+  max-width:  70vh;
+  max-height: 70vh;
+  background-color:transparent;
+  z-index: 1; 
+  border: black 1px solid;
+  
+  
 }
 
 #overlay img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 600px;
+  
+
 }
 
 .grid {
   column-count: 3;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 900px;
 }
 
 .grid img {
-  max-width: 200px;
+  max-width: 300px;
+  max-height: 700px;
+  border: 1px solid black;
 }
 
-.App {
-  text-align: center;
+img:hover {
+
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.close:hover {
+  background-color: tomato;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#skyline {
+  opacity: 50%;
 }
